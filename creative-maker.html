@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative maker - Veronika Strezh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="back-link"><span>←</span><span data-i18n="back">Back</span></a>
+            <div class="email-btn-wrapper">
+                <button class="header-email-btn" id="email-btn">
+                    <img src="images/mail.svg" alt="Email" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+                <div id="email-notification" class="email-notification" data-i18n="email-copied">Email copied</div>
+            </div>
+            <button class="header-email-btn telegram-header-btn" id="telegram-btn">
+                <img src="images/Group.svg" alt="Telegram" class="email-icon">
+                <span class="email-text">@raaisondetre</span>
+            </button>
+            <div class="header-lang">
+                <button class="lang-btn active">RU</button>
+                <button class="lang-btn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="project-detail-container">
+            <div class="project-hero">
+                <h1 class="project-detail-title" data-i18n="creative-title">Конструктор креативов</h1>
+                <p class="project-date" data-i18n="creative-date">с 0 до релиза — 1 неделя, сентябрь 2025</p>
+                <p class="project-detail-subtitle" data-i18n="creative-subtitle">Вдвоем с разработчиком создали внутренний микросервис для создания рутинных сторисов в инстаграм, который упростил жизнь команде</p>
+            </div>
+            
+            <div class="project-image-large">
+                <video src="video/video-output-7A0EA10B-2D05-4EAF-915F-1340FC208B18-1.mov" class="project-detail-image" autoplay loop muted playsinline></video>
+            </div>
+
+            <div class="project-content">
+                <div class="project-section" id="задача">
+                    <h2 class="project-section-title" data-i18n="task">Задача</h2>
+                    <p class="project-section-text" data-i18n="creative-task-text">
+                        Менеджеры регулярно поздравляют партнеров компании в сторис Instagram, используя однотипные креативы: фон, заголовок, дата и фото. Раньше их вручную делали графические дизайнеры, на это уходило много времени. За разговором с командой я предложила оптимизировать эти задачи, чтобы менеджеры самостоятельно собирали сторисы по шаблону
+                    </p>
+                </div>
+
+                <div class="project-section" id="процесс">
+                    <h2 class="project-section-title" data-i18n="process">Процесс</h2>
+                    <p class="project-section-text" data-i18n="creative-process-text">
+                        Я быстро набросала простой флоу и макеты, за референсы взяла редакторы для фотографий, функционал которых уже понятен и привычен большинству людей
+                    </p>
+                </div>
+
+                <div class="project-section" id="ключевые-решения">
+                    <h2 class="project-section-title" data-i18n="key-solutions">Ключевые решения</h2>
+                    <ol class="project-process-list">
+                        <li data-i18n="creative-solutions-1">Было принято решение создать сервис на дизайн-системе наших основных продуктов, так как надвигался редизайн дс и на наших внутренних микросервисах и команде мы можем исследовать поведение паттернов и компонентов дизайн-системы</li>
+                        <li data-i18n="creative-solutions-2">Mobile-first: менеджеры работают в инстаграме с телефона</li>
+                        <li data-i18n="creative-solutions-3">Ограниченная возможность для изменения креатива (фиксированные размеры, цвета, маштаб логотипа), чтобы минимизировать возможности ошибок и отход от концепции</li>
+                    </ol>
+                </div>
+
+                <div class="project-section" id="результат">
+                    <h2 class="project-section-title" data-i18n="result">Результат</h2>
+                    <p class="project-section-text" data-i18n="creative-result-text">
+                        Релиз MVP занял ~ неделю. После запуска сократили время на создание сторис минимум раза в 3 раз — уменьшились согласования и пробелы в коммуникациях, теперь дизайнеры не тратят время на рутину, а менеджеры делают креативы сами
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Message -->
+    <div class="thank-you-message">
+        <p data-i18n="thank-you">Спасибо, что долистали 🧡</p>
+    </div>
+
+    <!-- Footer / Contact -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-title" data-i18n="contact">Contact</h2>
+            <div class="footer-buttons">
+                <div class="email-btn-wrapper">
+                    <button class="header-email-btn footer-contact-btn" id="footer-email-btn-1">
+                        <img src="images/mail.svg" alt="Email" class="email-icon">
+                        <span class="email-text">strezh.veronika@mail.ru</span>
+                    </button>
+                    <div class="email-notification footer-notification" id="footer-email-notification-1" data-i18n="email-copied">Email copied</div>
+                </div>
+                <button class="header-email-btn footer-contact-btn" id="footer-telegram-btn-1">
+                    <img src="images/Group.svg" alt="Telegram" class="email-icon">
+                    <span class="email-text">@raaisondetre</span>
+                </button>
+                <button class="header-email-btn footer-contact-btn" id="footer-behance-btn">
+                    <img src="images/bh.png" alt="BH" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+                <div class="email-btn-wrapper">
+                    <button class="header-email-btn footer-contact-btn" id="footer-phone-btn">
+                        <img src="images/phone.png" alt="Phone" class="email-icon">
+                    </button>
+                    <div class="email-notification footer-notification" id="footer-phone-notification" data-i18n="phone-copied">Phone number copied</div>
+                </div>
+                <button class="header-email-btn footer-contact-btn" id="footer-dprofile-btn">
+                    <img src="images/dprofile.jpg" alt="Profile" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+            </div>
+            <p class="footer-credit" data-i18n="footer-credit">design & dev by me</p>
+        </div>
+    </footer>
+
+    <script>
+        const emailBtn = document.getElementById('email-btn');
+        const notification = document.getElementById('email-notification');
+        const email = 'strezh.veronika@mail.ru';
+
+        emailBtn.addEventListener('click', async function() {
+            try {
+                await navigator.clipboard.writeText(email);
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 1000);
+            } catch (err) {
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 1000);
+            }
+        });
+
+        const telegramBtn = document.getElementById('telegram-btn');
+        const telegramUsername = 'raaisondetre';
+
+        telegramBtn.addEventListener('click', function() {
+            window.open(`https://t.me/${telegramUsername}`, '_blank');
+        });
+
+        // Переключение языка
+        const translations = {
+            ru: {
+                'back': 'Back',
+                'email-copied': 'email скопирован',
+                'phone-copied': 'номер телефона скопирован',
+                'contact': 'Контакты',
+                'footer-credit': 'design & dev by me',
+                'thank-you': 'Спасибо, что долистали 🧡',
+                'creative-title': 'Конструктор креативов',
+                'creative-date': 'с 0 до релиза — 1 неделя, сентябрь 2025',
+                'creative-subtitle': 'Вдвоем с разработчиком создали внутренний микросервис для создания рутинных сторисов в инстаграм, который упростил жизнь команде',
+                'task': 'Задача',
+                'creative-task-text': 'Менеджеры регулярно поздравляют партнеров компании в сторис Instagram, используя однотипные креативы: фон, заголовок, дата и фото. Раньше их вручную делали графические дизайнеры, на это уходило много времени. За разговором с командой я предложила оптимизировать эти задачи, чтобы менеджеры самостоятельно собирали сторисы по шаблону',
+                'process': 'Процесс',
+                'creative-process-text': 'Я быстро набросала простой флоу и макеты, за референсы взяла редакторы для фотографий, функционал которых уже понятен и привычен большинству людей',
+                'key-solutions': 'Ключевые решения',
+                'creative-solutions-1': 'Было принято решение создать сервис на дизайн-системе наших основных продуктов, так как надвигался редизайн дс и на наших внутренних микросервисах и команде мы можем исследовать поведение паттернов и компонентов дизайн-системы',
+                'creative-solutions-2': 'Mobile-first: менеджеры работают в инстаграме с телефона',
+                'creative-solutions-3': 'Ограниченная возможность для изменения креатива (фиксированные размеры, цвета, маштаб логотипа), чтобы минимизировать возможности ошибок и отход от концепции',
+                'result': 'Результат',
+                'creative-result-text': 'Релиз MVP занял ~ неделю. После запуска сократили время на создание сторис минимум раза в 3 раз — уменьшились согласования и пробелы в коммуникациях, теперь дизайнеры не тратят время на рутину, а менеджеры делают креативы сами'
+            },
+            en: {
+                'back': 'Back',
+                'email-copied': 'email copied',
+                'phone-copied': 'phone number copied',
+                'contact': 'Contact',
+                'footer-credit': 'design & dev by me',
+                'thank-you': 'Thanks for scrolling 🧡',
+                'creative-title': 'Creative maker',
+                'creative-date': '0 to release — 1 week, september 2025',
+                'creative-subtitle': 'Together with a developer, we created an internal microservice for generating routine Instagram Stories, which significantly simplified the team\'s workflow.',
+                'task': 'Task',
+                'creative-task-text': 'Managers regularly congratulate the company\'s partners in Instagram Stories using similar creative assets: background, title, date, and photo. Previously, graphic designers created all of these manually, which took a lot of time. After discussing this with the team, I suggested optimizing the process so managers could assemble Stories themselves using templates.',
+                'process': 'Process',
+                'creative-process-text': 'I quickly sketched a simple flow and layouts, using familiar photo-editing tools as references — their functionality is already intuitive for most users.',
+                'key-solutions': 'Key Decisions',
+                'creative-solutions-1': 'We decided to build the service using the design system of our core products, since a redesign was approaching — internal microservices were the perfect space to test the behavior of new patterns and components.',
+                'creative-solutions-2': 'Mobile-first: managers work with Instagram from their phones.',
+                'creative-solutions-3': 'Limited customization options (fixed sizes, colors, logo scaling) to minimize mistakes and maintain consistent visual style.',
+                'result': 'Result',
+                'creative-result-text': 'The MVP was released in about a week. After launch, the time required to create Stories decreased by at least 3× — approvals became simpler, communication gaps disappeared, designers stopped wasting time on routine work, and managers now create Stories themselves.'
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'ru';
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    const translation = translations[lang][key];
+                    if (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'LI') {
+                        element.textContent = translation;
+                    } else {
+                        element.innerHTML = translation;
+                    }
+                }
+            });
+            
+            langButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === lang.toUpperCase()) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        
+        updateLanguage(currentLanguage);
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.textContent.toLowerCase();
+                updateLanguage(lang);
+            });
+        });
+
+        // Footer email button
+        const footerEmailBtn1 = document.getElementById('footer-email-btn-1');
+        const footerEmailNotification1 = document.getElementById('footer-email-notification-1');
+        
+        if (footerEmailBtn1) {
+            footerEmailBtn1.addEventListener('click', async function() {
+                try {
+                    await navigator.clipboard.writeText(email);
+                    footerEmailNotification1.classList.add('show');
+                    setTimeout(() => {
+                        footerEmailNotification1.classList.remove('show');
+                    }, 1000);
+                } catch (err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = email;
+                    textArea.style.position = 'fixed';
+                    textArea.style.opacity = '0';
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    footerEmailNotification1.classList.add('show');
+                    setTimeout(() => {
+                        footerEmailNotification1.classList.remove('show');
+                    }, 1000);
+                }
+            });
+        }
+
+        // Footer telegram button
+        const footerTelegramBtn1 = document.getElementById('footer-telegram-btn-1');
+        
+        if (footerTelegramBtn1) {
+            footerTelegramBtn1.addEventListener('click', function() {
+                window.open('https://t.me/raaisondetre', '_blank');
+            });
+        }
+
+        // Footer behance button
+        const footerBehanceBtn = document.getElementById('footer-behance-btn');
+        
+        if (footerBehanceBtn) {
+            footerBehanceBtn.addEventListener('click', function() {
+                window.open('https://www.behance.net/ssstrezh', '_blank');
+            });
+        }
+
+        // Footer dprofile button
+        const footerDprofileBtn = document.getElementById('footer-dprofile-btn');
+        
+        if (footerDprofileBtn) {
+            footerDprofileBtn.addEventListener('click', function() {
+                window.open('https://dprofile.ru/ssstrezh', '_blank');
+            });
+        }
+
+        // Footer phone button
+        const footerPhoneBtn = document.getElementById('footer-phone-btn');
+        const footerPhoneNotification = document.getElementById('footer-phone-notification');
+        const phoneNumber = '+79245377701';
+        
+        if (footerPhoneBtn) {
+            footerPhoneBtn.addEventListener('click', async function() {
+                try {
+                    await navigator.clipboard.writeText(phoneNumber);
+                    footerPhoneNotification.classList.add('show');
+                    setTimeout(() => {
+                        footerPhoneNotification.classList.remove('show');
+                    }, 1000);
+                } catch (err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = phoneNumber;
+                    textArea.style.position = 'fixed';
+                    textArea.style.opacity = '0';
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    footerPhoneNotification.classList.add('show');
+                    setTimeout(() => {
+                        footerPhoneNotification.classList.remove('show');
+                    }, 1000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

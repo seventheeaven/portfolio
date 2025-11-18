@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal - Veronika Strezh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="back-link"><span>←</span><span data-i18n="back">Back</span></a>
+            <div class="email-btn-wrapper">
+                <button class="header-email-btn" id="email-btn">
+                    <img src="images/mail.svg" alt="Email" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+                <div id="email-notification" class="email-notification" data-i18n="email-copied">Email copied</div>
+            </div>
+            <button class="header-email-btn telegram-header-btn" id="telegram-btn">
+                <img src="images/Group.svg" alt="Telegram" class="email-icon">
+                <span class="email-text">@raaisondetre</span>
+            </button>
+            <div class="header-lang">
+                <button class="lang-btn active">RU</button>
+                <button class="lang-btn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="project-detail-container">
+            <div class="project-hero">
+                <h1 class="project-detail-title" data-i18n="portal-title">Портал</h1>
+                <p class="project-date" data-i18n="portal-date">февраль – август 2024</p>
+                <p class="project-detail-subtitle" data-i18n="portal-subtitle">Корпоративный портал для отдела тестирования, ДИТ Правительства Москвы. Единый сервис для управления задачами, роста компетенций и командного взаимодействия.<br><br>Моя зона ответственности — полный цикл: исследования, UX/UI, финальная передача в разработку.</p>
+                <button class="btn-cv" id="product-link-btn" data-i18n="portal-button">Посмотреть как живет продукт</button>
+            </div>
+            
+            <div class="project-image-large">
+                <img src="images/project-portal.png" alt="Portal Project" class="project-detail-image">
+            </div>
+
+            <div class="project-content">
+                <div class="project-section" id="задача">
+                    <h2 class="project-section-title" data-i18n="task">Задача</h2>
+                    <p class="project-section-text" data-i18n="portal-task-text">
+                        Создать корпоративный портал, чтобы закрыть потребность в «виртуальном офисе» и усилить вовлечённость распределённой команды тестировщиков. ТЗ — построить систему с индивидуальными планами развития, рабочей коммуникацией и автоматизацией типовых процессов.
+                    </p>
+                </div>
+
+                <div class="project-section" id="процесс">
+                    <h2 class="project-section-title" data-i18n="process">Процесс</h2>
+                    <ol class="project-process-list">
+                        <li data-i18n="portal-process-1">Спроектировала UX, подготовила всю визуальную систему (под мой макет писался бэк).</li>
+                        <li data-i18n="portal-process-2">Настроила оптимальный дизайн-процесс в команде в рамках ограниченного времени</li>
+                        <li data-i18n="portal-process-3">Донесла ценность исследований и внедрила их в работу</li>
+                        <li data-i18n="portal-process-4">Проводила интервью и юзабилити тестирования с пользователями. Сформировывала задания и прототипировала интерфейс.</li>
+                        <li data-i18n="portal-process-5">Взаимодействовала с frontend и backend разработчиками, с тестировщиками. С фронтами выстраили процесс передачи макетов.</li>
+                        <li data-i18n="portal-process-6">Реализовала UI-kit с документацией</li>
+                        <li data-i18n="portal-process-7">Презентовала и защищала свои решения перед командой.</li>
+                    </ol>
+                </div>
+
+                <div class="project-section" id="ключевые-решения">
+                    <h2 class="project-section-title" data-i18n="key-solutions">Ключевые решения</h2>
+                    <ol class="project-process-list">
+                        <li data-i18n="portal-solutions-1">Две сущности Портала — Для сотрудника и для Лида</li>
+                        <li data-i18n="portal-solutions-2">Персонализированная лента, обратная связь, награды за достижения.</li>
+                        <li data-i18n="portal-solutions-3">Индивидуальные планы развития сотрудников, интеграция с системой оценки компетенций.</li>
+                        <li data-i18n="portal-solutions-4">Календарь задач, трекинг отпусков/наград, разделы для развития и командной коммуникации.</li>
+                        <li data-i18n="portal-solutions-5">Для лидеров — инструменты аналитики, назначения и гибкого администрирования</li>
+                    </ol>
+                </div>
+
+                <div class="project-section" id="результат">
+                    <h2 class="project-section-title" data-i18n="result">Результат</h2>
+                    <ol class="project-process-list">
+                        <li data-i18n="portal-result-1">94 пользователя за первые недели после запуска.</li>
+                        <li data-i18n="portal-result-2">70% положительных самостоятельных отзывов.</li>
+                        <li data-i18n="portal-result-3">67 заполненных анкет для дальнейшего развития персонала.</li>
+                        <li data-i18n="portal-result-4">42 поста и 17 комментариев в ленте за первые 2 месяца (рост вовлеченности и узнаваемости внутри команды).</li>
+                        <li data-i18n="portal-result-5">Портал стал повседневным инструментом команды</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="project-image-large">
+                <img src="images/IPR-2.png" alt="IPR-2" class="project-detail-image">
+            </div>
+
+            <div class="project-image-large">
+                <img src="images/portal-img-2.png" alt="Portal Image 2" class="project-detail-image">
+            </div>
+
+            <div class="project-image-large">
+                <img src="images/Portal.png" alt="Portal" class="project-detail-image">
+            </div>
+
+            <div class="project-image-large">
+                <img src="images/Rewies.png" alt="Rewies" class="project-detail-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Message -->
+    <div class="thank-you-message">
+        <p data-i18n="thank-you">Спасибо, что долистали 🧡</p>
+    </div>
+
+    <!-- Footer / Contact -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-title" data-i18n="contact">Contact</h2>
+            <div class="footer-buttons">
+                <div class="email-btn-wrapper">
+                    <button class="header-email-btn footer-contact-btn" id="footer-email-btn-1">
+                        <img src="images/mail.svg" alt="Email" class="email-icon">
+                        <span class="email-text">strezh.veronika@mail.ru</span>
+                    </button>
+                    <div class="email-notification footer-notification" id="footer-email-notification-1" data-i18n="email-copied">Email copied</div>
+                </div>
+                <button class="header-email-btn footer-contact-btn" id="footer-telegram-btn-1">
+                    <img src="images/Group.svg" alt="Telegram" class="email-icon">
+                    <span class="email-text">@raaisondetre</span>
+                </button>
+                <button class="header-email-btn footer-contact-btn" id="footer-behance-btn">
+                    <img src="images/bh.png" alt="BH" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+                <div class="email-btn-wrapper">
+                    <button class="header-email-btn footer-contact-btn" id="footer-phone-btn">
+                        <img src="images/phone.png" alt="Phone" class="email-icon">
+                    </button>
+                    <div class="email-notification footer-notification" id="footer-phone-notification" data-i18n="phone-copied">Phone number copied</div>
+                </div>
+                <button class="header-email-btn footer-contact-btn" id="footer-dprofile-btn">
+                    <img src="images/dprofile.jpg" alt="Profile" class="email-icon">
+                    <span class="email-text">strezh.veronika@mail.ru</span>
+                </button>
+            </div>
+            <p class="footer-credit" data-i18n="footer-credit">design & dev by me</p>
+        </div>
+    </footer>
+
+    <script>
+        const emailBtn = document.getElementById('email-btn');
+        const notification = document.getElementById('email-notification');
+        const email = 'strezh.veronika@mail.ru';
+
+        emailBtn.addEventListener('click', async function() {
+            try {
+                await navigator.clipboard.writeText(email);
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 1000);
+            } catch (err) {
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 1000);
+            }
+        });
+
+        const telegramBtn = document.getElementById('telegram-btn');
+        const telegramUsername = 'raaisondetre';
+
+        telegramBtn.addEventListener('click', function() {
+            window.open(`https://t.me/${telegramUsername}`, '_blank');
+        });
+
+        // Переключение языка
+        const translations = {
+            ru: {
+                'back': 'Back',
+                'email-copied': 'email скопирован',
+                'phone-copied': 'номер телефона скопирован',
+                'contact': 'Контакты',
+                'footer-credit': 'design & dev by me',
+                'thank-you': 'Спасибо, что долистали 🧡',
+                'portal-title': 'Портал',
+                'portal-date': 'февраль – август 2024',
+                'portal-subtitle': 'Корпоративный портал для отдела тестирования, ДИТ Правительства Москвы. Единый сервис для управления задачами, роста компетенций и командного взаимодействия.<br><br>Моя зона ответственности — полный цикл: исследования, UX/UI, финальная передача в разработку.',
+                'portal-button': 'Посмотреть как живет продукт',
+                'task': 'Задача',
+                'portal-task-text': 'Создать корпоративный портал, чтобы закрыть потребность в «виртуальном офисе» и усилить вовлечённость распределённой команды тестировщиков. ТЗ — построить систему с индивидуальными планами развития, рабочей коммуникацией и автоматизацией типовых процессов.',
+                'process': 'Процесс',
+                'portal-process-1': 'Спроектировала UX, подготовила всю визуальную систему (под мой макет писался бэк).',
+                'portal-process-2': 'Настроила оптимальный дизайн-процесс в команде в рамках ограниченного времени',
+                'portal-process-3': 'Донесла ценность исследований и внедрила их в работу',
+                'portal-process-4': 'Проводила интервью и юзабилити тестирования с пользователями. Сформировывала задания и прототипировала интерфейс.',
+                'portal-process-5': 'Взаимодействовала с frontend и backend разработчиками, с тестировщиками. С фронтами выстраили процесс передачи макетов.',
+                'portal-process-6': 'Реализовала UI-kit с документацией',
+                'portal-process-7': 'Презентовала и защищала свои решения перед командой.',
+                'key-solutions': 'Ключевые решения',
+                'portal-solutions-1': 'Две сущности Портала — Для сотрудника и для Лида',
+                'portal-solutions-2': 'Персонализированная лента, обратная связь, награды за достижения.',
+                'portal-solutions-3': 'Индивидуальные планы развития сотрудников, интеграция с системой оценки компетенций.',
+                'portal-solutions-4': 'Календарь задач, трекинг отпусков/наград, разделы для развития и командной коммуникации.',
+                'portal-solutions-5': 'Для лидеров — инструменты аналитики, назначения и гибкого администрирования',
+                'result': 'Результат',
+                'portal-result-1': '94 пользователя за первые недели после запуска.',
+                'portal-result-2': '70% положительных самостоятельных отзывов.',
+                'portal-result-3': '67 заполненных анкет для дальнейшего развития персонала.',
+                'portal-result-4': '42 поста и 17 комментариев в ленте за первые 2 месяца (рост вовлеченности и узнаваемости внутри команды).',
+                'portal-result-5': 'Портал стал повседневным инструментом команды'
+            },
+            en: {
+                'back': 'Back',
+                'email-copied': 'email copied',
+                'phone-copied': 'phone number copied',
+                'contact': 'Contact',
+                'footer-credit': 'design & dev by me',
+                'thank-you': 'Thanks for scrolling 🧡',
+                'portal-title': 'Portal',
+                'portal-date': 'february – august 2024',
+                'portal-subtitle': 'Corporate portal for the QA Department of the Moscow Government IT (DIT) — a unified service for task management, skills development, and team collaboration.<br><br>My responsibility: full-cycle ownership — research, UX/UI design, and final handoff to development.',
+                'portal-button': 'See the live product',
+                'task': 'Task',
+                'portal-task-text': 'Build a corporate portal to serve as a "virtual office" and increase engagement across a distributed team of QA specialists. The requirements: create a system with individual development plans, workplace communication, and automation of routine processes.',
+                'process': 'Process',
+                'portal-process-1': 'Designed the full UX and created the entire visual system (the backend was built directly from my layouts).',
+                'portal-process-2': 'Set up an efficient design process within tight deadlines.',
+                'portal-process-3': 'Advocated for the value of research and integrated it into the workflow.',
+                'portal-process-4': 'Conducted interviews and usability testing; prepared tasks and prototyped interfaces.',
+                'portal-process-5': 'Collaborated closely with frontend and backend developers, as well as QA engineers; established a clear handoff process with frontend.',
+                'portal-process-6': 'Built a documented UI kit.',
+                'portal-process-7': 'Presented and defended design decisions to the team.',
+                'key-solutions': 'Key Decisions',
+                'portal-solutions-1': 'Two user modes in the Portal — for Employees and for Team Leads.',
+                'portal-solutions-2': 'Personalized feed, feedback system, achievement rewards.',
+                'portal-solutions-3': 'Individual development plans integrated with the competency assessment system.',
+                'portal-solutions-4': 'Task calendar, vacation/award tracking, sections for growth and team communication.',
+                'portal-solutions-5': 'For leads — analytics tools, assignment management, and flexible administration.',
+                'result': 'Result',
+                'portal-result-1': '94 users in the first weeks after launch.',
+                'portal-result-2': '70% positive unsolicited feedback.',
+                'portal-result-3': '67 completed development questionnaires for HR planning.',
+                'portal-result-4': '42 posts and 17 comments in the activity feed during the first 2 months (showing growth in engagement and team visibility).',
+                'portal-result-5': 'The portal became a daily tool for the entire team.'
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'ru';
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        const productLinkBtn = document.getElementById('product-link-btn');
+        
+        // Функция для обновления текста кнопки в мобильной версии
+        function updateButtonText() {
+            if (productLinkBtn) {
+                if (window.innerWidth <= 768 && currentLanguage === 'ru') {
+                    // Мобильная версия русской версии - короткий текст
+                    productLinkBtn.textContent = 'Как живет продукт';
+                } else {
+                    // Десктопная версия и мобильная английская версия - полный текст из translations
+                    const key = productLinkBtn.getAttribute('data-i18n');
+                    if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                        productLinkBtn.textContent = translations[currentLanguage][key];
+                    }
+                }
+            }
+        }
+
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    const translation = translations[lang][key];
+                    if (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'LI') {
+                        element.textContent = translation;
+                    } else {
+                        element.innerHTML = translation;
+                    }
+                }
+            });
+            
+            langButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === lang.toUpperCase()) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Обновляем текст кнопки после смены языка
+            updateButtonText();
+        }
+        
+        updateLanguage(currentLanguage);
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.textContent.toLowerCase();
+                updateLanguage(lang);
+            });
+        });
+
+        productLinkBtn.addEventListener('click', function() {
+            window.open('https://t.me/tmsmosru', '_blank');
+        });
+
+        // Обновляем текст кнопки при изменении размера окна
+        window.addEventListener('resize', updateButtonText);
+
+        // Footer email button
+        const footerEmailBtn1 = document.getElementById('footer-email-btn-1');
+        const footerEmailNotification1 = document.getElementById('footer-email-notification-1');
+        
+        if (footerEmailBtn1) {
+            footerEmailBtn1.addEventListener('click', async function() {
+                try {
+                    await navigator.clipboard.writeText(email);
+                    footerEmailNotification1.classList.add('show');
+                    setTimeout(() => {
+                        footerEmailNotification1.classList.remove('show');
+                    }, 1000);
+                } catch (err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = email;
+                    textArea.style.position = 'fixed';
+                    textArea.style.opacity = '0';
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    footerEmailNotification1.classList.add('show');
+                    setTimeout(() => {
+                        footerEmailNotification1.classList.remove('show');
+                    }, 1000);
+                }
+            });
+        }
+
+        // Footer telegram button
+        const footerTelegramBtn1 = document.getElementById('footer-telegram-btn-1');
+        
+        if (footerTelegramBtn1) {
+            footerTelegramBtn1.addEventListener('click', function() {
+                window.open('https://t.me/raaisondetre', '_blank');
+            });
+        }
+
+        // Footer behance button
+        const footerBehanceBtn = document.getElementById('footer-behance-btn');
+        
+        if (footerBehanceBtn) {
+            footerBehanceBtn.addEventListener('click', function() {
+                window.open('https://www.behance.net/ssstrezh', '_blank');
+            });
+        }
+
+        // Footer dprofile button
+        const footerDprofileBtn = document.getElementById('footer-dprofile-btn');
+        
+        if (footerDprofileBtn) {
+            footerDprofileBtn.addEventListener('click', function() {
+                window.open('https://dprofile.ru/ssstrezh', '_blank');
+            });
+        }
+
+        // Footer phone button
+        const footerPhoneBtn = document.getElementById('footer-phone-btn');
+        const footerPhoneNotification = document.getElementById('footer-phone-notification');
+        const phoneNumber = '+79245377701';
+        
+        if (footerPhoneBtn) {
+            footerPhoneBtn.addEventListener('click', async function() {
+                try {
+                    await navigator.clipboard.writeText(phoneNumber);
+                    footerPhoneNotification.classList.add('show');
+                    setTimeout(() => {
+                        footerPhoneNotification.classList.remove('show');
+                    }, 1000);
+                } catch (err) {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = phoneNumber;
+                    textArea.style.position = 'fixed';
+                    textArea.style.opacity = '0';
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    footerPhoneNotification.classList.add('show');
+                    setTimeout(() => {
+                        footerPhoneNotification.classList.remove('show');
+                    }, 1000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
