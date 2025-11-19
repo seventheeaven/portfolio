@@ -201,7 +201,7 @@
                 'project-3-title': 'Конструктор<br>креативов',
                 'project-3-description': 'Инициировала и спроектировала внутренний инструмент для&nbsp;генерации сторис, который ускорил процесс их создания',
                 'project-4-title': 'Оптимизация<br>отчетов',
-                'project-4-description': 'Оптимизировала работу с отчетами: ускорила перенос информации и уменьшила количество обращений в поддержку',
+                'project-4-description': 'Оптимизировала работу с&nbsp;отчетами: ускорила перенос информации и уменьшила количество обращений в&nbsp;поддержку',
                 'contact': 'Контакты',
                 'phone-copied': 'номер телефона скопирован',
                 'footer-credit': 'design & dev by me'
@@ -228,6 +228,9 @@
 
         let currentLanguage = localStorage.getItem('language') || 'ru';
         const langButtons = document.querySelectorAll('.lang-btn');
+        
+        // Убираем класс active со всех кнопок при загрузке, чтобы избежать конфликтов
+        langButtons.forEach(btn => btn.classList.remove('active'));
         
         function updateLanguage(lang) {
             currentLanguage = lang;
@@ -258,14 +261,10 @@
                             element.style.lineHeight = ''; // Сбрасываем для других языков
                         }
                     }
-                    // Для заголовков проектов 3 и 4 добавляем интерлиньяж 110% только для русского
+                    // Для заголовков проектов 3 и 4 добавляем интерлиньяж 110% только для русского и только в мобильной версии
                     else if (key === 'project-3-title' || key === 'project-4-title') {
                         element.innerHTML = translation;
-                        if (lang === 'ru') {
-                            element.style.lineHeight = '110%';
-                        } else {
-                            element.style.lineHeight = ''; // Сбрасываем для других языков
-                        }
+                        // Интерлиньяж будет применен через updateProjectTitlesLineHeight
                     }
                     else if (element.tagName === 'INPUT' || element.tagName === 'BUTTON') {
                         element.textContent = translation;
@@ -276,9 +275,10 @@
             });
             
             // Обновляем активную кнопку языка
-            langButtons.forEach(btn => {
+            langButtons.forEach((btn, index) => {
                 btn.classList.remove('active');
-                if (btn.textContent === lang.toUpperCase()) {
+                const btnText = btn.textContent.trim().toUpperCase();
+                if (btnText === lang.toUpperCase() || (lang === 'ru' && index === 0) || (lang === 'en' && index === 1)) {
                     btn.classList.add('active');
                 }
             });
@@ -293,6 +293,11 @@
                 if (project4Title) {
                     project4Title.innerHTML = project4Title.innerHTML.replace(/<br\s*\/?>/gi, ' ');
                 }
+            }
+            
+            // Обновляем интерлиньяж заголовков проектов
+            if (typeof updateProjectTitlesLineHeight === 'function') {
+                updateProjectTitlesLineHeight();
             }
         }
         
@@ -310,11 +315,32 @@
             }
         }
         
-        // Инициализация языка при загрузке
-        updateLanguage(currentLanguage);
+        // Функция для обновления интерлиньяжа заголовков проектов
+        function updateProjectTitlesLineHeight() {
+            const project1Title = document.querySelector('[data-i18n="project-1-title"]');
+            const project2Title = document.querySelector('[data-i18n="project-2-title"]');
+            const project3Title = document.querySelector('[data-i18n="project-3-title"]');
+            const project4Title = document.querySelector('[data-i18n="project-4-title"]');
+            
+            // Для проектов 1 и 2 - убираем интерлиньяж везде
+            [project1Title, project2Title].forEach(element => {
+                if (element) {
+                    element.style.lineHeight = '';
+                }
+            });
+            
+            // Для проектов 3 и 4 - интерлиньяж 110% только в десктопной версии и только для русского
+            [project3Title, project4Title].forEach(element => {
+                if (element) {
+                    if (currentLanguage === 'ru' && window.innerWidth > 768) {
+                        element.style.lineHeight = '110%';
+                    } else {
+                        element.style.lineHeight = '';
+                    }
+                }
+            });
+        }
         
-        // Обработка мобильной версии при загрузке и изменении размера окна
-        handleMobileTitles();
         window.addEventListener('resize', function() {
             if (window.innerWidth <= 768) {
                 handleMobileTitles();
@@ -322,7 +348,14 @@
                 // При возврате к десктопной версии восстанавливаем <br> через updateLanguage
                 updateLanguage(currentLanguage);
             }
+            updateProjectTitlesLineHeight();
         });
+        
+        // Инициализация языка при загрузке страницы
+        updateLanguage(currentLanguage);
+        
+        // Применяем интерлиньяж при загрузке
+        updateProjectTitlesLineHeight();
         
         langButtons.forEach(button => {
             button.addEventListener('click', function() {

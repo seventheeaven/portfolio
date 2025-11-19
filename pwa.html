@@ -225,6 +225,9 @@
         let currentLanguage = localStorage.getItem('language') || 'ru';
         const langButtons = document.querySelectorAll('.lang-btn');
         
+        // Убираем класс active со всех кнопок при загрузке, чтобы избежать конфликтов
+        langButtons.forEach(btn => btn.classList.remove('active'));
+        
         function updateLanguage(lang) {
             currentLanguage = lang;
             localStorage.setItem('language', lang);
@@ -242,9 +245,10 @@
                 }
             });
             
-            langButtons.forEach(btn => {
+            langButtons.forEach((btn, index) => {
                 btn.classList.remove('active');
-                if (btn.textContent === lang.toUpperCase()) {
+                const btnText = btn.textContent.trim().toUpperCase();
+                if (btnText === lang.toUpperCase() || (lang === 'ru' && index === 0) || (lang === 'en' && index === 1)) {
                     btn.classList.add('active');
                 }
             });
