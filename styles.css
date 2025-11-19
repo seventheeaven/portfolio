@@ -919,6 +919,10 @@ body {
     text-align: left;
 }
 
+#решение .project-section-text {
+    text-align: left;
+}
+
 .project-process-list {
     list-style: decimal;
     padding-left: 24px;
@@ -1228,12 +1232,12 @@ body {
     }
 
     .projects-container > *:nth-child(2) {
-        margin-top: 48px;
+        margin-top: 64px;
     }
 
     .projects-container > *:nth-child(3),
     .projects-container > *:nth-child(4) {
-        margin-top: 48px;
+        margin-top: 64px;
     }
 
     .project-card-link {
@@ -1318,7 +1322,7 @@ body {
     }
 
     .overlay-title {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 8px;
         color: var(--text-color);
         text-align: left;
@@ -1326,6 +1330,7 @@ body {
 
     .overlay-description {
         font-size: 16px;
+        font-weight: 500;
         line-height: 1.3;
         color: #939393;
         opacity: 1;
@@ -1575,14 +1580,15 @@ body {
     }
 
     .overlay-title {
-        font-size: 18px;
+        font-size: 24px;
         margin-bottom: 6px;
         color: var(--text-color);
         text-align: left;
     }
 
     .overlay-description {
-        font-size: 13px;
+        font-size: 15px;
+        font-weight: 500;
         line-height: 1.25;
         color: #939393;
         opacity: 1;
