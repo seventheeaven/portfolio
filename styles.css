@@ -1528,6 +1528,16 @@ body {
         transform: none;
     }
 
+    .project-card:hover .project-image {
+        transform: none;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    .project-card:hover .project-tag {
+        left: 0;
+    }
+
     /* Footer */
     .projects + .footer {
         padding: 80px 20px 40px;
@@ -1785,6 +1795,16 @@ body {
 
     .project-card:hover {
         transform: none;
+    }
+
+    .project-card:hover .project-image {
+        transform: none;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    .project-card:hover .project-tag {
+        left: 0;
     }
 
     /* Footer */
