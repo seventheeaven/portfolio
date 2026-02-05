@@ -7,6 +7,20 @@
     <link rel="icon" type="image/png" href="images/avatar.png">
     <link rel="apple-touch-icon" href="images/avatar.png">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105452955', 'ym');
+
+        ym(105452955, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105452955" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!-- Header -->
@@ -69,10 +83,24 @@
     <!-- Projects Section -->
     <section class="projects">
         <div class="projects-container">
+            <a href="syuda.html" class="project-card-link">
+                <div class="project-card">
+                    <img src="images/syuda.png" alt="Сюда" class="project-image">
+                    <span class="project-tag">mobile</span>
+                    <img src="images/vector_2_purple.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
+                        <h3 class="overlay-title" data-i18n="project-5-title">Report Tools</h3>
+                        <p class="overlay-description" data-i18n="project-5-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
+                    </div>
+                </div>
+            </a>
+
             <a href="pwa.html" class="project-card-link">
                 <div class="project-card">
                     <img src="images/project-nda.png" alt="NDA Project" class="project-image">
-                    <div class="overlay-rectangle">
+                    <span class="project-tag">web</span>
+                    <img src="images/vector_2.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
                         <h3 class="overlay-title" data-i18n="project-1-title">Creating a PWA</h3>
                         <p class="overlay-description" data-i18n="project-1-description">Reworked the interface structure and improved the flow, reducing PWA creation time by&nbsp;20%</p>
                     </div>
@@ -82,19 +110,11 @@
             <a href="portal.html" class="project-card-link">
                 <div class="project-card">
                     <img src="images/project-portal.png" alt="Portal Project" class="project-image">
-                    <div class="overlay-rectangle">
+                    <span class="project-tag">web</span>
+                    <img src="images/vector_2.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
                         <h3 class="overlay-title" data-i18n="project-2-title">Portal</h3>
                         <p class="overlay-description" data-i18n="project-2-description">A corporate portal for the&nbsp;Testing Department. The&nbsp;platform accelerated the&nbsp;team's growth system and&nbsp;strengthened internal collaboration.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="creative-maker.html" class="project-card-link">
-                <div class="project-card">
-                    <img src="images/Frame 10659.png" alt="Generation 1" class="project-image project-image-third">
-                    <div class="overlay-rectangle">
-                        <h3 class="overlay-title" data-i18n="project-3-title">Creative maker</h3>
-                        <p class="overlay-description" data-i18n="project-3-description">Initiated and designed an internal tool for&nbsp;creating quick stories, which significantly sped up&nbsp;the production process</p>
                     </div>
                 </div>
             </a>
@@ -102,9 +122,23 @@
             <a href="cell-selection.html" class="project-card-link">
                 <div class="project-card">
                     <img src="images/cell-selection.jpg" alt="Cell selection Project" class="project-image">
-                    <div class="overlay-rectangle">
+                    <span class="project-tag">web</span>
+                    <img src="images/vector_2.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
                         <h3 class="overlay-title" data-i18n="project-4-title">Report Tools</h3>
                         <p class="overlay-description" data-i18n="project-4-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="creative-maker.html" class="project-card-link">
+                <div class="project-card">
+                    <img src="images/Frame 10659.png" alt="Generation 1" class="project-image project-image-third">
+                    <span class="project-tag">mobile</span>
+                    <img src="images/vector_2_purple.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
+                        <h3 class="overlay-title" data-i18n="project-3-title">Creative maker</h3>
+                        <p class="overlay-description" data-i18n="project-3-description">Initiated and designed an internal tool for&nbsp;creating quick stories, which significantly sped up&nbsp;the production process</p>
                     </div>
                 </div>
             </a>
@@ -199,11 +233,13 @@
                 'project-1-title': 'Создание PWA',
                 'project-1-description': 'Переработала структуру интерфейса и&nbsp;улучшила флоу, время&nbsp;на создание PWA сократилось на&nbsp;20%',
                 'project-2-title': 'Портал',
-                'project-2-description': 'Корпоративный портал для отдела тестирования. Сервис ускорил систему роста команды и укрепил отношения в&nbsp;коллективе',
+                'project-2-description': 'Корпоративный портал для отдела тестирования ДИТ. Ускорил рост команды и повысил вовлечённость',
                 'project-3-title': 'Конструктор<br>креативов',
-                'project-3-description': 'Инициировала и спроектировала внутренний инструмент для&nbsp;генерации сторис, который ускорил процесс их создания',
+                'project-3-description': 'Инициировала и спроектировала внутренний инструмент для генерации сторис, ускорив их создание',
                 'project-4-title': 'Оптимизация<br>отчетов',
-                'project-4-description': 'Оптимизировала работу с&nbsp;отчетами: ускорила перенос информации и уменьшила количество обращений в&nbsp;поддержку',
+                'project-4-description': 'Оптимизировала работу с отчётами: ускорила перенос данных и снизила нагрузку на поддержку',
+                'project-5-title': 'Сюдá',
+                'project-5-description': 'Создала мобильный веб-сервис с&nbsp;подборками мест для досуга в родном городе',
                 'contact': 'Контакты',
                 'phone-copied': 'номер телефона скопирован',
                 'footer-credit': 'design & dev by me'
@@ -222,6 +258,8 @@
                 'project-3-description': 'Initiated and designed an internal tool for&nbsp;creating quick stories, which significantly sped up&nbsp;the production process',
                 'project-4-title': 'Report Tools',
                 'project-4-description': 'Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests',
+                'project-5-title': 'Report Tools',
+                'project-5-description': 'Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests',
                 'contact': 'Contact',
                 'phone-copied': 'phone number copied',
                 'footer-credit': 'design & dev by me'
