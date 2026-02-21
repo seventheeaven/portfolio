@@ -658,9 +658,13 @@ body {
     align-items: flex-start;
 }
 
-.projects-container > *:nth-child(2),
+/* Второй ряд: 3-я и 4-я карточки */
 .projects-container > *:nth-child(3),
 .projects-container > *:nth-child(4) {
+    margin-top: 48px;
+}
+/* Третий ряд: 5-я карточка по центру, тот же отступ что между 1–2 и 3–4 */
+.projects-container > *:nth-child(5) {
     margin-top: 48px;
 }
 
@@ -1382,7 +1386,8 @@ body {
 
     .projects-container > *:nth-child(2),
     .projects-container > *:nth-child(3),
-    .projects-container > *:nth-child(4) {
+    .projects-container > *:nth-child(4),
+    .projects-container > *:nth-child(5) {
         margin-top: 64px;
     }
 
