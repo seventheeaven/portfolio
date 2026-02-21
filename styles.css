@@ -658,12 +658,9 @@ body {
     align-items: flex-start;
 }
 
+.projects-container > *:nth-child(2),
 .projects-container > *:nth-child(3),
 .projects-container > *:nth-child(4) {
-    margin-top: 48px;
-}
-
-.projects-container > *:nth-child(5) {
     margin-top: 48px;
 }
 
@@ -800,8 +797,8 @@ body {
     left: -100px;
 }
 
-/* Styles for 1st and 5th project cards (mobile) */
-.projects-container > *:nth-child(1) .project-card {
+/* Styles for 4th and 5th project cards (mobile) */
+.projects-container > *:nth-child(4) .project-card {
     background-color: #C2A9F4;
 }
 
@@ -809,7 +806,7 @@ body {
     background-color: #C2A9F4;
 }
 
-.projects-container > *:nth-child(1) .project-tag {
+.projects-container > *:nth-child(4) .project-tag {
     background-color: #CDB5FD;
     color: #A386DB;
     width: 104px;
@@ -821,7 +818,7 @@ body {
     width: 104px;
 }
 
-.projects-container > *:nth-child(1) .overlay-title {
+.projects-container > *:nth-child(4) .overlay-title {
     color: #6D54A0;
 }
 
@@ -829,7 +826,7 @@ body {
     color: #6D54A0;
 }
 
-.projects-container > *:nth-child(1) .overlay-description {
+.projects-container > *:nth-child(4) .overlay-description {
     color: #A386DB;
 }
 
@@ -1383,13 +1380,9 @@ body {
         gap: 0;
     }
 
-    .projects-container > *:nth-child(2) {
-        margin-top: 64px;
-    }
-
+    .projects-container > *:nth-child(2),
     .projects-container > *:nth-child(3),
-    .projects-container > *:nth-child(4),
-    .projects-container > *:nth-child(5) {
+    .projects-container > *:nth-child(4) {
         margin-top: 64px;
     }
 
@@ -1412,7 +1405,7 @@ body {
         padding: 0;
     }
 
-    .projects-container > *:nth-child(1) .project-card,
+    .projects-container > *:nth-child(4) .project-card,
     .projects-container > *:nth-child(5) .project-card {
         background-color: transparent;
     }
@@ -1497,12 +1490,12 @@ body {
         padding: 0;
     }
 
-    .projects-container > *:nth-child(1) .overlay-title,
+    .projects-container > *:nth-child(4) .overlay-title,
     .projects-container > *:nth-child(5) .overlay-title {
         color: var(--text-color);
     }
 
-    .projects-container > *:nth-child(1) .overlay-description,
+    .projects-container > *:nth-child(4) .overlay-description,
     .projects-container > *:nth-child(5) .overlay-description {
         color: #939393;
     }

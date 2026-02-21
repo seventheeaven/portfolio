@@ -83,18 +83,6 @@
     <!-- Projects Section -->
     <section class="projects">
         <div class="projects-container">
-            <a href="syuda.html" class="project-card-link">
-                <div class="project-card">
-                    <img src="images/syuda_2.png" alt="Сюда" class="project-image">
-                    <span class="project-tag">mobile</span>
-                    <img src="images/vector_2_purple.svg" alt="Project Overlay" class="overlay-vector">
-                    <div class="overlay-text">
-                        <h3 class="overlay-title" data-i18n="project-5-title">Report Tools</h3>
-                        <p class="overlay-description" data-i18n="project-5-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
-                    </div>
-                </div>
-            </a>
-
             <a href="pwa.html" class="project-card-link">
                 <div class="project-card">
                     <img src="images/project-nda.png" alt="NDA Project" class="project-image">
@@ -103,6 +91,18 @@
                     <div class="overlay-text">
                         <h3 class="overlay-title" data-i18n="project-1-title">Creating a PWA</h3>
                         <p class="overlay-description" data-i18n="project-1-description">Reworked the interface structure and improved the flow, reducing PWA creation time by&nbsp;20%</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="cell-selection.html" class="project-card-link">
+                <div class="project-card">
+                    <img src="images/cell-selection.jpg" alt="Cell selection Project" class="project-image">
+                    <span class="project-tag">web</span>
+                    <img src="images/vector_2.svg" alt="Project Overlay" class="overlay-vector">
+                    <div class="overlay-text">
+                        <h3 class="overlay-title" data-i18n="project-4-title">Report Tools</h3>
+                        <p class="overlay-description" data-i18n="project-4-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
                     </div>
                 </div>
             </a>
@@ -119,14 +119,14 @@
                 </div>
             </a>
 
-            <a href="cell-selection.html" class="project-card-link">
+            <a href="syuda.html" class="project-card-link">
                 <div class="project-card">
-                    <img src="images/cell-selection.jpg" alt="Cell selection Project" class="project-image">
-                    <span class="project-tag">web</span>
-                    <img src="images/vector_2.svg" alt="Project Overlay" class="overlay-vector">
+                    <img src="images/syuda_2.png" alt="Сюда" class="project-image">
+                    <span class="project-tag">mobile</span>
+                    <img src="images/vector_2_purple.svg" alt="Project Overlay" class="overlay-vector">
                     <div class="overlay-text">
-                        <h3 class="overlay-title" data-i18n="project-4-title">Report Tools</h3>
-                        <p class="overlay-description" data-i18n="project-4-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
+                        <h3 class="overlay-title" data-i18n="project-5-title">Report Tools</h3>
+                        <p class="overlay-description" data-i18n="project-5-description">Optimized the reporting workflow: improved data selection, sped up&nbsp;information transfer, and reduced the number of&nbsp;support requests</p>
                     </div>
                 </div>
             </a>
@@ -266,7 +266,10 @@
             }
         };
 
-        let currentLanguage = localStorage.getItem('language') || 'ru';
+        // Определяем язык системы пользователя
+        const browserLang = navigator.language || navigator.userLanguage;
+        const systemLang = browserLang.startsWith('ru') ? 'ru' : 'en';
+        let currentLanguage = localStorage.getItem('language') || systemLang;
         const langButtons = document.querySelectorAll('.lang-btn');
         
         // Убираем класс active со всех кнопок при загрузке, чтобы избежать конфликтов
@@ -410,9 +413,9 @@
             cvButton.addEventListener('click', function() {
                 const lang = currentLanguage || 'ru';
                 if (lang === 'ru') {
-                    window.open('https://cloud.mail.ru/public/7tbD/WNLxHCzAy', '_blank');
+                    window.open('https://drive.google.com/file/d/1SQTJI-7Dpf7QUQ7m8-5lgrxsjGfM0SDj/view?usp=sharing', '_blank');
                 } else {
-                    window.open('https://cloud.mail.ru/public/2riy/Mn2uzkf8r', '_blank');
+                    window.open('https://drive.google.com/file/d/1kkiyzhUDmQ9JnPPJvr_lQAU3cj8gxm2f/view?usp=sharing', '_blank');
                 }
             });
         }
