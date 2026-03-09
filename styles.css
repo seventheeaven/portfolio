@@ -1016,6 +1016,13 @@ body {
     box-shadow: 0 4px 10px rgba(113, 113, 113, 0.16);
 }
 
+/* Лоудеры/заглушки для медиа: пока картинка или видео грузятся, показываем светло-серый фон */
+.project-image,
+.project-detail-image,
+.project-image-large video {
+    background-color: #f5f5f5;
+}
+
 .project-detail-image-cropped {
     clip-path: inset(0 0 260px 0);
     border-radius: 20px;
