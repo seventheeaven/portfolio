@@ -1,0 +1,73 @@
+/* Страницы кейсов — поверх home.css, по референсу sheeerokov.com/mnvo */
+.case-aside-top { display: flex; flex-direction: column; gap: 24px; padding-top: 24px; }
+@media (min-width: 768px) { .case-aside-top { gap: 32px; padding-top: 0; } }
+
+.case-nav { display: flex; align-items: center; justify-content: space-between; }
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.back:hover { text-decoration: underline; }
+
+.case-head { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 768px) { .case-head { gap: 16px; } }
+
+.case-date { color: var(--text-secondary); }
+
+.case-link {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    margin-top: 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--btn-bg);
+    font-weight: 500;
+    transition: background .2s;
+}
+.case-link:hover { background: var(--btn-bg-hover); }
+
+.case-main { display: flex; flex-direction: column; gap: 64px; padding-bottom: 24px; }
+@media (min-width: 768px) { .case-main { gap: 96px; padding: 48px 0; } }
+
+/* медиа */
+.project-image-large { display: flex; flex-direction: column; gap: 12px; }
+
+.project-detail-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border-media);
+    background: var(--card);
+}
+
+.project-image-caption { color: var(--text-secondary); }
+
+/* текстовые секции */
+.project-content { display: flex; flex-direction: column; gap: 64px; }
+@media (min-width: 768px) { .project-content { gap: 96px; } }
+
+.project-section { display: flex; flex-direction: column; gap: 12px; }
+
+.project-section-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.375;
+    text-wrap: balance;
+}
+@media (min-width: 640px) { .project-section-title { font-size: 20px; } }
+
+.project-section-text { text-wrap: pretty; }
+
+.project-process-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.project-process-list li { position: relative; padding-left: 16px; text-wrap: pretty; }
+.project-process-list li::before { content: '•'; position: absolute; left: 0; }
+
+.thank-you-message { color: var(--text-secondary); padding-bottom: 96px; }
+@media (min-width: 768px) { .thank-you-message { padding-bottom: 0; } }

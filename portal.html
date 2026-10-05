@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
     <title>Portal - Veronika Strezh</title>
     <link rel="icon" type="image/webp" href="images/avatar.webp">
     <link rel="apple-touch-icon" href="images/avatar.webp">
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="case.css">
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -23,46 +28,81 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <a href="index.html" class="back-link"><span>←</span><span data-i18n="back">Back</span></a>
-            <div class="email-btn-wrapper">
-                <button class="header-email-btn" id="email-btn">
-                    <svg class="email-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM17.6 4.25L10.53 8.67C10.21 8.87 9.79 8.87 9.47 8.67L2.4 4.25C2.29973 4.19371 2.21192 4.11766 2.14189 4.02645C2.07186 3.93525 2.02106 3.83078 1.99258 3.71937C1.96409 3.60796 1.9585 3.49194 1.97616 3.37831C1.99381 3.26468 2.03434 3.15581 2.09528 3.0583C2.15623 2.96079 2.23632 2.87666 2.33073 2.811C2.42513 2.74533 2.53187 2.69951 2.6445 2.6763C2.75712 2.65309 2.87328 2.65297 2.98595 2.67595C3.09863 2.69893 3.20546 2.74453 3.3 2.81L10 7L16.7 2.81C16.7945 2.74453 16.9014 2.69893 17.014 2.67595C17.1267 2.65297 17.2429 2.65309 17.3555 2.6763C17.4681 2.69951 17.5749 2.74533 17.6693 2.811C17.7637 2.87666 17.8438 2.96079 17.9047 3.0583C17.9657 3.15581 18.0062 3.26468 18.0238 3.37831C18.0415 3.49194 18.0359 3.60796 18.0074 3.71937C17.9789 3.83078 17.9281 3.93525 17.8581 4.02645C17.7881 4.11766 17.7003 4.19371 17.6 4.25Z" fill="black"/>
-                    </svg>
-                    <span class="email-text">strezh.veronika@mail.ru</span>
-                </button>
-                <div id="email-notification" class="email-notification" data-i18n="email-copied">Email copied</div>
+    <div class="page">
+        <aside class="aside">
+            <div class="case-aside-top">
+                <div class="case-nav">
+                    <a class="back" href="index.html">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                        <span data-i18n="to-home">На главную</span>
+                    </a>
+                    <div class="lang">
+                        <button type="button" data-lang="ru">RU</button>
+                        <button type="button" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="case-head">
+                    <h1 class="title" data-i18n="portal-title">Портал</h1>
+                    <p class="case-date" data-i18n="portal-date">февраль – август 2024</p>
+                    <p class="text" data-i18n="portal-subtitle">Корпоративный портал для отдела тестирования, ДИТ Правительства Москвы. Единый сервис для управления задачами, роста компетенций и командного взаимодействия.<br><br>Моя зона ответственности — полный цикл: исследования, UX/UI, финальная передача в разработку.</p>
+                    <a class="case-link" href="https://t.me/tmsmosru" target="_blank" rel="noopener noreferrer" data-i18n="portal-button">Посмотреть как живет продукт</a>
+                </div>
             </div>
-            <button class="header-email-btn telegram-header-btn" id="telegram-btn">
-                <svg class="email-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0169 0.117465C18.264 0.013456 18.5345 -0.022416 18.8002 0.0135823C19.0659 0.0495806 19.317 0.156133 19.5276 0.32215C19.7381 0.488167 19.9003 0.707579 19.9973 0.957548C20.0942 1.20752 20.1224 1.47891 20.0789 1.74347L17.8109 15.5005C17.5909 16.8275 16.1349 17.5885 14.9179 16.9275C13.8999 16.3745 12.3879 15.5225 11.0279 14.6335C10.3479 14.1885 8.26489 12.7635 8.52089 11.7495C8.74089 10.8825 12.2409 7.62447 14.2409 5.68747C15.0259 4.92647 14.6679 4.48747 13.7409 5.18747C11.4389 6.92547 7.74289 9.56847 6.52089 10.3125C5.44289 10.9685 4.88089 11.0805 4.20889 10.9685C2.98289 10.7645 1.84589 10.4485 0.917888 10.0635C-0.336112 9.54347 -0.275112 7.81947 0.916888 7.31747L18.0169 0.117465Z" fill="black"/>
-                </svg>
-                <span class="email-text">@raaisondetre</span>
-            </button>
-            <div class="header-lang">
-                <button class="lang-btn active">RU</button>
-                <button class="lang-btn">EN</button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Project Detail Section -->
-    <section class="project-detail">
-        <div class="project-detail-container">
-            <div class="project-hero">
-                <h1 class="project-detail-title" data-i18n="portal-title">Портал</h1>
-                <p class="project-date" data-i18n="portal-date">февраль – август 2024</p>
-                <p class="project-detail-subtitle" data-i18n="portal-subtitle">Корпоративный портал для отдела тестирования, ДИТ Правительства Москвы. Единый сервис для управления задачами, роста компетенций и командного взаимодействия.<br><br>Моя зона ответственности — полный цикл: исследования, UX/UI, финальная передача в разработку.</p>
-                <button class="btn-cv" id="product-link-btn" data-i18n="portal-button">Посмотреть как живет продукт</button>
+            <div class="contacts">
+                <div class="say-hi-slot">
+                <div class="say-hi" id="say-hi">
+                    <button type="button" class="say-hi-toggle" id="say-hi-toggle" aria-expanded="false">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                        <span>Say Hi!</span>
+                    </button>
+                    <div class="say-hi-panel" role="dialog" aria-label="Контакты">
+                        <div class="say-hi-head">
+                            <span>Say Hi!</span>
+                            <button type="button" class="say-hi-close" id="say-hi-close" aria-label="Закрыть">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                        </div>
+                        <div class="say-hi-list">
+                            <a class="say-hi-item" href="https://t.me/raaisondetre" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.2 4.1a1.3 1.3 0 0 1 1.8 1.4l-2.3 13.8c-.2 1.3-1.7 2.1-2.9 1.4-1-.6-2.5-1.4-3.9-2.3-.7-.4-2.7-1.9-2.5-2.9.2-.9 3.7-4.1 5.7-6.1.8-.8.4-1.2-.5-.5-2.3 1.7-6 4.4-7.2 5.1-1.1.7-1.6.8-2.3.7-1.2-.2-2.4-.5-3.3-.9-1.2-.5-1.2-2.3 0-2.8l17.4-7z"/></svg>
+                                <span>raaisondetre</span>
+                            </a>
+                            <button type="button" class="say-hi-item" data-copy="strezh.veronika@mail.ru" data-i18n-label="copy-email">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                                <span>copy email</span>
+                            </button>
+                            <button type="button" class="say-hi-item" data-copy="+79245377701" data-i18n-label="copy-phone">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                                <span>copy phone</span>
+                            </button>
+                            <a class="say-hi-item" href="https://www.behance.net/ssstrezh" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.2 11.3c.9-.4 1.5-1.2 1.5-2.4 0-2.2-1.6-2.9-3.6-2.9H1v12h5.3c2.1 0 4-1 4-3.3 0-1.5-.7-2.9-2.1-3.4zM3.5 8h2.3c.9 0 1.6.2 1.6 1.2 0 .9-.6 1.3-1.5 1.3H3.5V8zm2.5 8H3.5v-3.4h2.6c1.1 0 1.8.4 1.8 1.6 0 1.2-.8 1.8-1.9 1.8zM15 7h5.5v1.4H15zm2.8 2.4c-2.9 0-4.6 2-4.6 4.5 0 2.6 1.6 4.4 4.6 4.4 2.2 0 3.7-1 4.2-3.1h-2.2c-.2.7-1 1.1-1.9 1.1-1.5 0-2.2-.8-2.2-2.2h6.5c.1-2.8-1.4-4.7-4.4-4.7zm-2.1 3.6c.1-1.1.8-1.8 2-1.8s1.8.7 1.9 1.8h-3.9z"/></svg>
+                                <span>behance</span>
+                            </a>
+                            <a class="say-hi-item" href="https://dprofile.ru/ssstrezh" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M9 8h2.5a4 4 0 0 1 0 8H9z"/></svg>
+                                <span>dprofile</span>
+                            </a>
+                            <a class="say-hi-item" id="cv-link" href="https://drive.google.com/file/d/1Yg3t4HtJvWGERvINZFn--mRIrUATi6Jk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+                                <span data-i18n="cv">резюме.pdf</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Open</span>
+                </div>
             </div>
-            
+        </aside>
+
+        <main class="case-main">
             <div class="project-image-large">
                 <img src="images/project-portal.webp" alt="Portal Project" class="project-detail-image" loading="lazy" width="1600" height="900">
             </div>
-
             <div class="project-content">
                 <div class="project-section" id="задача">
                     <h2 class="project-section-title" data-i18n="task">Задача</h2>
@@ -70,7 +110,6 @@
                         Создать корпоративный портал, чтобы закрыть потребность в «виртуальном офисе» и усилить вовлечённость распределённой команды тестировщиков. ТЗ — построить систему с индивидуальными планами развития, рабочей коммуникацией и автоматизацией типовых процессов.
                     </p>
                 </div>
-
                 <div class="project-section" id="процесс">
                     <h2 class="project-section-title" data-i18n="process">Процесс</h2>
                     <ol class="project-process-list">
@@ -83,7 +122,6 @@
                         <li data-i18n="portal-process-7">Презентовала и защищала свои решения перед командой.</li>
                     </ol>
                 </div>
-
                 <div class="project-section" id="ключевые-решения">
                     <h2 class="project-section-title" data-i18n="key-solutions">Ключевые решения</h2>
                     <ol class="project-process-list">
@@ -94,7 +132,6 @@
                         <li data-i18n="portal-solutions-5">Для лидеров — инструменты аналитики, назначения и гибкого администрирования</li>
                     </ol>
                 </div>
-
                 <div class="project-section" id="результат">
                     <h2 class="project-section-title" data-i18n="result">Результат</h2>
                     <ol class="project-process-list">
@@ -106,106 +143,27 @@
                     </ol>
                 </div>
             </div>
-
             <div class="project-image-large">
                 <img src="images/IPR-2.webp" alt="IPR-2" class="project-detail-image" loading="lazy" width="1600" height="900">
             </div>
-
             <div class="project-image-large">
                 <img src="images/portal-img-2.webp" alt="Portal Image 2" class="project-detail-image" loading="lazy" width="1600" height="900">
             </div>
-
             <div class="project-image-large">
                 <img src="images/Portal.webp" alt="Portal" class="project-detail-image" loading="lazy" width="1600" height="900">
             </div>
-
             <div class="project-image-large">
                 <img src="images/Rewies.webp" alt="Rewies" class="project-detail-image" loading="lazy" width="1600" height="900">
             </div>
-        </div>
-    </section>
-
-    <!-- Thank You Message -->
-    <div class="thank-you-message">
+        
+            <div class="thank-you-message">
         <p data-i18n="thank-you">Спасибо, что долистали 🧡</p>
     </div>
-
-    <!-- Footer / Contact -->
-    <footer class="footer">
-        <div class="footer-container">
-            <h2 class="footer-title" data-i18n="contact">Contact</h2>
-            <div class="footer-buttons">
-                <div class="email-btn-wrapper">
-                    <button class="header-email-btn footer-contact-btn" id="footer-email-btn-1">
-                        <svg class="email-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                            <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM17.6 4.25L10.53 8.67C10.21 8.87 9.79 8.87 9.47 8.67L2.4 4.25C2.29973 4.19371 2.21192 4.11766 2.14189 4.02645C2.07186 3.93525 2.02106 3.83078 1.99258 3.71937C1.96409 3.60796 1.9585 3.49194 1.97616 3.37831C1.99381 3.26468 2.03434 3.15581 2.09528 3.0583C2.15623 2.96079 2.23632 2.87666 2.33073 2.811C2.42513 2.74533 2.53187 2.69951 2.6445 2.6763C2.75712 2.65309 2.87328 2.65297 2.98595 2.67595C3.09863 2.69893 3.20546 2.74453 3.3 2.81L10 7L16.7 2.81C16.7945 2.74453 16.9014 2.69893 17.014 2.67595C17.1267 2.65297 17.2429 2.65309 17.3555 2.6763C17.4681 2.69951 17.5749 2.74533 17.6693 2.811C17.7637 2.87666 17.8438 2.96079 17.9047 3.0583C17.9657 3.15581 18.0062 3.26468 18.0238 3.37831C18.0415 3.49194 18.0359 3.60796 18.0074 3.71937C17.9789 3.83078 17.9281 3.93525 17.8581 4.02645C17.7881 4.11766 17.7003 4.19371 17.6 4.25Z" fill="black"/>
-                        </svg>
-                        <span class="email-text">strezh.veronika@mail.ru</span>
-                    </button>
-                    <div class="email-notification footer-notification" id="footer-email-notification-1" data-i18n="email-copied">Email copied</div>
-                </div>
-                <button class="header-email-btn footer-contact-btn" id="footer-telegram-btn-1">
-                    <svg class="email-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0169 0.117465C18.264 0.013456 18.5345 -0.022416 18.8002 0.0135823C19.0659 0.0495806 19.317 0.156133 19.5276 0.32215C19.7381 0.488167 19.9003 0.707579 19.9973 0.957548C20.0942 1.20752 20.1224 1.47891 20.0789 1.74347L17.8109 15.5005C17.5909 16.8275 16.1349 17.5885 14.9179 16.9275C13.8999 16.3745 12.3879 15.5225 11.0279 14.6335C10.3479 14.1885 8.26489 12.7635 8.52089 11.7495C8.74089 10.8825 12.2409 7.62447 14.2409 5.68747C15.0259 4.92647 14.6679 4.48747 13.7409 5.18747C11.4389 6.92547 7.74289 9.56847 6.52089 10.3125C5.44289 10.9685 4.88089 11.0805 4.20889 10.9685C2.98289 10.7645 1.84589 10.4485 0.917888 10.0635C-0.336112 9.54347 -0.275112 7.81947 0.916888 7.31747L18.0169 0.117465Z" fill="black"/>
-                    </svg>
-                    <span class="email-text">@raaisondetre</span>
-                </button>
-                <button class="header-email-btn footer-contact-btn" id="footer-behance-btn">
-                    <img src="images/bh.png" alt="BH" class="email-icon" style="width:28px;height:28px;" loading="lazy" width="24" height="24">
-                    <span class="email-text">strezh.veronika@mail.ru</span>
-                </button>
-                <div class="email-btn-wrapper">
-                    <button class="header-email-btn footer-contact-btn" id="footer-phone-btn">
-                        <img src="images/phone.png" alt="Phone" class="email-icon" loading="lazy" width="20" height="20">
-                    </button>
-                    <div class="email-notification footer-notification" id="footer-phone-notification" data-i18n="phone-copied">Phone number copied</div>
-                </div>
-                <button class="header-email-btn footer-contact-btn" id="footer-dprofile-btn">
-                    <img src="images/dprofile.jpg" alt="Profile" class="email-icon" loading="lazy" width="20" height="20">
-                    <span class="email-text">strezh.veronika@mail.ru</span>
-                </button>
-            </div>
-            <p class="footer-credit" data-i18n="footer-credit">design & dev by me</p>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <script>
-        const emailBtn = document.getElementById('email-btn');
-        const notification = document.getElementById('email-notification');
-        const email = 'strezh.veronika@mail.ru';
-
-        emailBtn.addEventListener('click', async function() {
-            try {
-                await navigator.clipboard.writeText(email);
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 1000);
-            } catch (err) {
-                const textArea = document.createElement('textarea');
-                textArea.value = email;
-                textArea.style.position = 'fixed';
-                textArea.style.opacity = '0';
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 1000);
-            }
-        });
-
-        const telegramBtn = document.getElementById('telegram-btn');
-        const telegramUsername = 'raaisondetre';
-
-        telegramBtn.addEventListener('click', function() {
-            window.open(`https://t.me/${telegramUsername}`, '_blank');
-        });
-
-        // Переключение языка
-        const translations = {
+        window.CASE_TRANSLATIONS = {
             ru: {
                 'back': 'Back',
                 'email-copied': 'email скопирован',
@@ -275,176 +233,7 @@
                 'portal-result-5': 'The portal became a daily tool for the entire team.'
             }
         };
-
-        let currentLanguage = localStorage.getItem('language') || 'ru';
-        const langButtons = document.querySelectorAll('.lang-btn');
-        
-        // Убираем класс active со всех кнопок при загрузке, чтобы избежать конфликтов
-        langButtons.forEach(btn => btn.classList.remove('active'));
-        
-        const productLinkBtn = document.getElementById('product-link-btn');
-        
-        // Функция для обновления текста кнопки в мобильной версии
-        function updateButtonText() {
-            if (productLinkBtn) {
-                if (window.innerWidth <= 768 && currentLanguage === 'ru') {
-                    // Мобильная версия русской версии - короткий текст
-                    productLinkBtn.textContent = 'Как живет продукт';
-                } else {
-                    // Десктопная версия и мобильная английская версия - полный текст из translations
-                    const key = productLinkBtn.getAttribute('data-i18n');
-                    if (translations[currentLanguage] && translations[currentLanguage][key]) {
-                        productLinkBtn.textContent = translations[currentLanguage][key];
-                    }
-                }
-            }
-        }
-
-        function updateLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('language', lang);
-            document.documentElement.lang = lang;
-            
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    const translation = translations[lang][key];
-                    if (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'LI') {
-                        element.textContent = translation;
-                    } else {
-                        element.innerHTML = translation;
-                    }
-                }
-            });
-            
-            langButtons.forEach((btn, index) => {
-                btn.classList.remove('active');
-                const btnText = btn.textContent.trim().toUpperCase();
-                if (btnText === lang.toUpperCase() || (lang === 'ru' && index === 0) || (lang === 'en' && index === 1)) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Обновляем текст кнопки после смены языка
-            updateButtonText();
-        }
-        
-        updateLanguage(currentLanguage);
-        
-        langButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const lang = this.textContent.toLowerCase();
-                updateLanguage(lang);
-            });
-        });
-
-        productLinkBtn.addEventListener('click', function() {
-            window.open('https://t.me/tmsmosru', '_blank');
-        });
-
-        // Обновляем текст кнопки при изменении размера окна
-        window.addEventListener('resize', updateButtonText);
-
-        // Footer email button
-        const footerEmailBtn1 = document.getElementById('footer-email-btn-1');
-        const footerEmailNotification1 = document.getElementById('footer-email-notification-1');
-        
-        if (footerEmailBtn1) {
-            footerEmailBtn1.addEventListener('click', async function() {
-                try {
-                    await navigator.clipboard.writeText(email);
-                    footerEmailNotification1.classList.add('show');
-                    setTimeout(() => {
-                        footerEmailNotification1.classList.remove('show');
-                    }, 1000);
-                } catch (err) {
-                    const textArea = document.createElement('textarea');
-                    textArea.value = email;
-                    textArea.style.position = 'fixed';
-                    textArea.style.opacity = '0';
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                    footerEmailNotification1.classList.add('show');
-                    setTimeout(() => {
-                        footerEmailNotification1.classList.remove('show');
-                    }, 1000);
-                }
-            });
-        }
-
-        // Footer telegram button
-        const footerTelegramBtn1 = document.getElementById('footer-telegram-btn-1');
-        
-        if (footerTelegramBtn1) {
-            footerTelegramBtn1.addEventListener('click', function() {
-                window.open('https://t.me/raaisondetre', '_blank');
-            });
-        }
-
-        // Footer behance button
-        const footerBehanceBtn = document.getElementById('footer-behance-btn');
-        
-        if (footerBehanceBtn) {
-            footerBehanceBtn.addEventListener('click', function() {
-                window.open('https://www.behance.net/ssstrezh', '_blank');
-            });
-        }
-
-        // Footer dprofile button
-        const footerDprofileBtn = document.getElementById('footer-dprofile-btn');
-        
-        if (footerDprofileBtn) {
-            footerDprofileBtn.addEventListener('click', function() {
-                window.open('https://dprofile.ru/ssstrezh', '_blank');
-            });
-        }
-
-        // Footer phone button
-        const footerPhoneBtn = document.getElementById('footer-phone-btn');
-        const footerPhoneNotification = document.getElementById('footer-phone-notification');
-        const phoneNumber = '+79245377701';
-        
-        if (footerPhoneBtn) {
-            footerPhoneBtn.addEventListener('click', async function() {
-                try {
-                    await navigator.clipboard.writeText(phoneNumber);
-                    footerPhoneNotification.classList.add('show');
-                    setTimeout(() => {
-                        footerPhoneNotification.classList.remove('show');
-                    }, 1000);
-                } catch (err) {
-                    const textArea = document.createElement('textarea');
-                    textArea.value = phoneNumber;
-                    textArea.style.position = 'fixed';
-                    textArea.style.opacity = '0';
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                    footerPhoneNotification.classList.add('show');
-                    setTimeout(() => {
-                        footerPhoneNotification.classList.remove('show');
-                    }, 1000);
-                }
-            });
-        }
     </script>
-    
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105452955', 'ym');
-
-        ym(105452955, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/105452955" style="position:absolute; left:-9999px;" alt="" loading="lazy" width="1" height="1" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <script src="case.js"></script>
 </body>
 </html>
-
