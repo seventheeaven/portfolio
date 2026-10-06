@@ -160,8 +160,8 @@
          * Пока массив пустой, показываются заглушки.
          */
         const archive = [
-            { type: 'video', src: 'video/sfs-concept.mp4', ru: 'Концепт сайта San Francisco Symphony', en: 'San Francisco Symphony website concept' },
-            { type: 'video', src: 'video/syuda-post.mp4', ru: 'Сюдá — мобильный веб-сервис с подборками мест для досуга в родном городе.', en: 'Syuda — a mobile web service with curated places for leisure in my hometown.' },
+            { type: 'video', src: 'video/sfs-concept.mp4', poster: 'images/sfs-concept-poster.jpg', ru: 'Концепт сайта San Francisco Symphony', en: 'San Francisco Symphony website concept' },
+            { type: 'video', src: 'video/syuda-post.mp4', poster: 'images/syuda-post-poster.jpg', ru: 'Сюдá — мобильный веб-сервис с подборками мест для досуга в родном городе.', en: 'Syuda — a mobile web service with curated places for leisure in my hometown.' },
             { type: 'image', src: 'images/archive-roomoo.webp', full: 'images/archive-roomoo-full.webp', ru: 'Главный экран сервиса посуточной аренды жилья с AI-помощником', en: 'Home screen of a short-term rental service with an AI assistant' },
             { type: 'image', src: 'images/archive-geologists.webp', full: 'images/archive-geologists-full.webp', ru: 'Лендинг сервиса подбора проверенных геологов', en: 'Landing page of a service for finding verified geologists' },
         ];
@@ -230,7 +230,7 @@
 
         function mediaTag(item, inLightbox) {
             if (item.type === 'video') {
-                return `<video src="${item.src}" muted loop playsinline ${inLightbox ? 'autoplay' : 'preload="metadata"'}></video>`;
+                return `<video src="${item.src}"${item.poster ? ` poster="${item.poster}"` : ''} muted loop playsinline ${inLightbox ? 'autoplay' : 'preload="metadata"'}></video>`;
             }
             return `<img src="${item.src}" alt="${item[lang] || ''}" loading="lazy">`;
         }
